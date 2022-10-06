@@ -5,7 +5,7 @@ char    *ft_strrchr(const char *s, int c)
     int i;
     char    *str;
     
-    i = strlen(str) + 1;
+    i = ft_strlen(str) + 1;
     str = (char *) s;
     while(--i >= 0)
     {
