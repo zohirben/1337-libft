@@ -19,11 +19,3 @@ void    *ft_memchr(const void *s, int c, size_t n)
     }
     return (0);
 }
-
-int main()
-{
-    char str[] = "Hello";
-    printf("%s\n", ft_memchr(str, 'l', 3));
-    char str1[] = "Hello";
-    printf("%s", memchr(str1, 'l', 3));
-}

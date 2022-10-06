@@ -17,13 +17,3 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     }
     return (0);
 }
-
-int main()
-{
-    char str1[] = "ABCDE";
-    char str2[] = "AB";
-    printf("%i\n", memcmp(str1, str2, 4));
-    char str11[] = "ABCDE";
-    char str21[] = "AB";
-    printf("%i", ft_memcmp(str11, str21, 4));
-}
