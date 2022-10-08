@@ -3,20 +3,12 @@
 char    *ft_strrchr(const char *s, int c)
 {
     int i;
-    char    *str;
     
-    i = ft_strlen(str) + 1;
-    str = (char *) s;
+    i = ft_strlen(s) + 1;
     while(--i >= 0)
     {
-        if (str[i] == (char)c)
-            return (&str[i]);
+        if (((char *)s)[i] == (char)c)
+            return (&((char *)s)[i]);
     }
     return (0);
-}
-
-int main()
-{
-    char str[] = "Hello World";
-    printf("%s", ft_strrchr(str, 'l'));
 }

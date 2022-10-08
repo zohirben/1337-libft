@@ -30,12 +30,3 @@ size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
         return (ft_strlen(source) + destnow);
     return (0);
 }
-
-int main()
-{
-    const char *str1 = "World World";
-    char str2[100] = "Salam";
-
-    printf("%lu\n", strlcat(str2, str1, 15));
-    printf("%s", str2);
-}
