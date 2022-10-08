@@ -6,8 +6,8 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
     char    *str1;
     char    *str2;
 
-    //i = len - 1;
-    i = len;
+    
+    i = len - 1;
     str1 = (char *) src;
     str2 = (char *) dst;
     if(str1 < str2)
