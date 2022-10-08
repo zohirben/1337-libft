@@ -9,7 +9,7 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
     i = len - 1;
     str1 = (char *) src;
     str2 = (char *) dst;
-    while(str1[i] != str1[-1] && i != (size_t) -1)
+    while(i != (size_t) - 1)
     {
         str2[i] = str1[i];
         i--;

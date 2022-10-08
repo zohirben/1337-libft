@@ -13,11 +13,22 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
     j = 0;
     while(i < len)
     {
-        
+        j = 0;
+        while(str[i + j] == sub[j] && (j + i) < len)
+        {
+            j++;
+        }
+        if (sub[j] == '\0')
+            return (&str[i]);
+        i++;
     }
+    return (0);
 }
 
-int main()
-{
-    
-}
+// int main()
+// {
+//     char str[] = "Hello World This Is Me :D";
+//     char sub[] = "Wor";
+//     printf("%s\n", ft_strnstr(str, sub, 12));
+//     printf("%s", strnstr(str, sub, 12));
+// }
