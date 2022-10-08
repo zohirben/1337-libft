@@ -4,10 +4,12 @@ char    *ft_strchr(const char *s, int c)
 {
     int i;
     char    *str;
+    int len;
     
     i = 0;
     str = (char *) s;
-    while(str[i] != str[ft_strlen(str)+1])
+    len = ft_strlen(str);
+    while(i <= len)
     {
         if (str[i] == (char) c)
         {
