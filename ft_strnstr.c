@@ -11,6 +11,8 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
     sub = (char *) needle;
     i = 0;
     j = 0;
+    if (*sub == '\0')
+        return (str);
     while(i < len)
     {
         j = 0;
@@ -29,6 +31,6 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 // {
 //     char str[] = "Hello World This Is Me :D";
 //     char sub[] = "Wor";
-//     printf("%s\n", ft_strnstr(str, sub, 12));
-//     printf("%s", strnstr(str, sub, 12));
+//     printf("%s\n", ft_strnstr(str, sub, 4));
+//     printf("%s", strnstr(str, sub, 4));
 // }

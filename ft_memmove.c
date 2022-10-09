@@ -20,5 +20,6 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
     }
     else
         memcpy(str2, str1, len);
+        //khasni nfexi l function ft_memcpy
     return (str2);
 }
