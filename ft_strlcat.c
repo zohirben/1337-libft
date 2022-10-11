@@ -13,17 +13,12 @@ size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
     if (dstsize == 0)
         return (0);
     destnow = ft_strlen(dst);
-    dstlen = dstsize - ft_strlen(dst) - 1;
     if (dstsize < destnow)
         return (ft_strlen(src) + dstsize);
+    dstlen = dstsize - destnow - 1;
     i = destnow;
     while(j < dstlen)
-    {
         dst[i++] = src[j++];
-    }
     dst[i] = '\0';
-    
-    if (dstsize > destnow)
-        return (ft_strlen(src) + destnow);
-    return (0);
+    return (ft_strlen(src) + destnow);
 }
