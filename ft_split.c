@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int ft_countword(char *s, char c)
+static int ft_countword(char *s, char c)
 {
     int i;
     int count;
@@ -13,11 +13,11 @@ int ft_countword(char *s, char c)
         {
             i++;
         }
-        if (s[i] != '\0' && s[i] != c)
+        if (s[i] && s[i] != c)
         {
             count++;
         }
-        while (s[i] != c && s[i] != '\0')
+        while (s[i] != c && s[i])
         {
             i++;
         }
@@ -25,28 +25,77 @@ int ft_countword(char *s, char c)
     return (count);
 }
 
+static int ft_wordsize(char *s, char c)
+{
+    int i;
+
+    i = 0;
+    while (s[i] != c)
+    {
+        i++;
+    }
+    return (i);
+}
+
+static char    *ft_word(char *s, char c)
+{
+    int i;
+    int wordlen;
+    char    *word;
+
+    i = 0;
+    wordlen = ft_wordsize(s, c);
+    word = (char *)malloc(wordlen + 1);
+    if (!word)
+        return (0);
+    while (s[i] != c && s[i])
+    {
+        word[i] = s[i];
+        i++;
+    }
+    word[i] = '\0';
+    return (word);
+}
+
 char    **ft_split(char const *s, char c)
 {
     int i;
+    char *s2;
     char    **str;
 
-    str = (char **)malloc(ft_wordcount(s, c) + 1);
+    if (!s)
+        return (0);
+    s2 = (char *) s;
+    str = (char **)malloc(sizeof(char **) * ft_countword(s2, c) + 1);
+    if (!str)
+        return (0);
     i = 0;
-    while (*str)
+    while (*s2)
     {
-        while (*str == c && *str)
+        while (*s2 == c && *s2)
+            s2++;
+        if (*s2 != c && *s2)
         {
-            str++;
+            str[i] = ft_word(s2, c);
+            i++;
         }
-        if (*str != c && *str)
-        {
-            
-        }
+        while (*s2 != c && *s2)
+            s2++;
     }
+    str[i] = NULL;
+    return (str);
 }
 
 // int main()
 // {
-//     char str[] = "xxxxxxHelloxxxxWorldxxxxItsxxxxxxxxMe";
-//     printf("%i\n", ft_countword(str, 'x'));
+//     char s[] = "xxxxxxHelloxxxxWorldxxxxItsxxxxxxxxMexxxx";
+//     char **str;
+//     str = ft_split(s, 'x');
+//     int i = 0;
+//     while (str[i])
+//     {
+//         printf("%s", str[i]);
+//         printf("\n");
+//         i++;
+//     }
 // }
