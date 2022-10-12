@@ -7,6 +7,8 @@ void    *ft_memcpy(void *dst, const void *src, size_t n)
     char    *str2;
 
     i = 0;
+    if (dst == src)
+        return (0);
     str1 = (char *) src;
     str2 = (char *) dst;
     while(i < n)
