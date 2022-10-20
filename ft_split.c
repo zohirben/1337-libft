@@ -62,7 +62,7 @@ char    **ft_split(char const *s, char c)
     int i;
     char *s2;
     char    **str;
-
+    
     if (!s)
         return (0);
     s2 = (char *) s;
@@ -88,7 +88,7 @@ char    **ft_split(char const *s, char c)
 
 // int main()
 // {
-//     char s[] = "xxxxxxHelloxxxxWorldxxxxItsxxxxxxxxMexxxx";
+//     char s[] = "xxxxItsxxxxxxxxMexxxx";
 //     char **str;
 //     str = ft_split(s, 'x');
 //     int i = 0;

@@ -11,8 +11,7 @@ void    *ft_calloc(size_t count, size_t size)
         return (0);
     while(i < (count * size))
     {
-        str[i] = '\0';
-        i++;
+        str[i++] = '\0';
     }
     return (str);
 }
