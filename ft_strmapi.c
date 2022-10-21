@@ -1,14 +1,14 @@
 #include "libft.h"
 
-char ft_crypt(unsigned int key, char c)
-{
-    return (c+=key);
-}
+// char ft_crypt(unsigned int key, char c)
+// {
+//     return (c+=key);
+// }
 
-char ft_decrypt(unsigned int key, char c)
-{
-    return (c-=key);
-}
+// char ft_decrypt(unsigned int key, char c)
+// {
+//     return (c-=key);
+// }
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -16,14 +16,16 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     int len;
     char    *str;
 
+    if (!s)
+        return (0);
     i = 0;
-    len = strlen(s);
+    len = ft_strlen(s);
     str = (char *)malloc((len + 1));
     if (!str)
         return (0);
     while (i < len)
     {
-        str[i] = (*f)(7, s[i]);
+        str[i] = (*f)(i, s[i]);
         i++;
     }
     str[i] = '\0';
