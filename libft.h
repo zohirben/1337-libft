@@ -5,6 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 size_t ft_strlen(const char *str);
 int ft_isalpha(int c);
