@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/24 20:18:39 by zbenaiss          #+#    #+#             */
+/*   Updated: 2022/10/24 20:24:18 by zbenaiss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int ft_atoi(const char *str)
@@ -8,13 +20,13 @@ int ft_atoi(const char *str)
 
     i = 0;
     number = 0;
-    operator = 0;
+    operator = 1;
     while((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
         i++;
-    while(str[i] == '-' || str[i] == '+')
+    if(str[i] == '-' || str[i] == '+')
     {
         if (str[i] == '-')
-            operator++;
+            operator = -1;
         i++;
     }
     while (str[i] >= '0' && str[i] <= '9')
@@ -23,14 +35,12 @@ int ft_atoi(const char *str)
         number += (str[i] - 48);
         i++;
     }
-    if(operator % 2 == 0)
-        return (number);
-    return (-number);
+    return (number * operator);
 }
 
-int main ()
-{
-    char str[] = "-123324342342334";
-    printf("%i\n", ft_atoi(str));
-    printf("%i\n", atoi(str));
-}
+// int main ()
+// {
+//     char str[] = "--45";
+//     printf("%i\n", ft_atoi(str));
+//     printf("%i\n", atoi(str));
+// }
