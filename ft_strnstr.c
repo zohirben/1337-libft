@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:23 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:12:23 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/25 20:12:00 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	j = 0;
 	if (*sub == '\0')
 		return (str);
-	while (i < len)
+	while (i < len && str[i])
 	{
 		j = 0;
 		while (str[i + j] == sub[j] && sub[j] && (j + i) < len)
@@ -41,8 +41,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 // int main()
 // {
-//     char str[] = "Hello World This Is Me :D";
-//     char sub[] = "Wor";
-//     printf("%s\n", ft_strnstr(str, sub, 4));
-//     printf("%s", strnstr(str, sub, 4));
+//     char str[] = "";
+//     char sub[] = "coucou";
+//     printf("%s\n", ft_strnstr(str, sub, -1));
+//     printf("%s", strnstr(str, sub, -1));
 // }

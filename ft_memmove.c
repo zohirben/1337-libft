@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:11:50 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:11:50 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/25 16:57:57 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	else
-		memcpy(str2, str1, len);
-	//khasni nfexi l function ft_memcpy
+		ft_memcpy(str2, str1, len);
 	return (str2);
 }
