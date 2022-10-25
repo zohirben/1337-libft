@@ -1,48 +1,60 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/24 21:12:47 by zbenaiss          #+#    #+#             */
+/*   Updated: 2022/10/24 21:12:48 by zbenaiss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_CharFind(const char *str, char c) 
+int	ft_CharFind(const char *str, char c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i])
-    {
-        if (c == str[i])
-            return (1);
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (str[i])
+	{
+		if (c == str[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
-char    *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    int start;
-    int end;
-    char    *str;
+	int		start;
+	int		end;
+	char	*str;
 
-    if (!s1 || !set)
-        return (0);
-    start = 0;
-    end = ft_strlen(s1) - 1;
-    while (s1[start])
-    {
-        if (ft_CharFind(set, s1[start]))
-            start++;
-        else
-            break;
-    }
-    while (start < end)
-    {
-        if (ft_CharFind(set, s1[end]))
-            end--;
-        else
-            break;
-    }
-    str = (char *)malloc((end - start) + 1);
-    if (!str)
-        return (0);
-    str = ft_substr(s1, start, (end - start) + 1);
-    return (str);
+	if (!s1 || !set)
+		return (0);
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	while (s1[start])
+	{
+		if (ft_CharFind(set, s1[start]))
+			start++;
+		else
+			break ;
+	}
+	while (start < end)
+	{
+		if (ft_CharFind(set, s1[end]))
+			end--;
+		else
+			break ;
+	}
+	str = (char *)malloc((end - start) + 1);
+	if (!str)
+		return (0);
+	str = ft_substr(s1, start, (end - start) + 1);
+	return (str);
 }
 
 // int main()

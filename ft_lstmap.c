@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 20:19:37 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 20:19:37 by zbenaiss         ###   ########.fr       */
+/*   Created: 2022/10/24 21:26:51 by zbenaiss          #+#    #+#             */
+/*   Updated: 2022/10/25 14:48:15 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	i;
-	char	*str;
+    t_list  *ptr;
+    t_list  *head;
 
-	i = 0;
-	str = (char *)malloc(count * size);
-	if (!str)
-		return (0);
-	while (i < (count * size))
-	{
-		str[i++] = '\0';
-	}
-	return (str);
+    head = 0;
+    ptr = 0;
+    while (lst)
+    {
+        ptr = ft_lstnew(f(lst->content));
+        if (!ptr)
+        {
+            ft_lstclear(&ptr, del);
+            return NULL;
+        }
+        ft_lstadd_back(&head, ptr);
+        lst = lst->next;
+    }
+    return (head);
 }
-
-// int main()
-// {
-//     char *str = ft_calloc(212, sizeof(char));
-//     str = memcpy(str, "Helloererserso3", 5);
-//     printf("%s\n", str);
-//     free(str);
-//     printf("%s",str);
-// }
