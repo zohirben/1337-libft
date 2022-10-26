@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:04 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:12:04 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:21:25 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,10 @@ char	*ft_strdup(const char *s1)
 	char	*str;
 
 	i = 0;
-	str = (char *)malloc(strlen(s1) + 1);
+	str = (char *)malloc(ft_strlen(s1) + 1);
 	if (!str)
 		return (0);
-	memcpy(str, s1, strlen(s1));
-	//memcpy should be ft_memcpy
+	ft_memcpy(str, s1, ft_strlen(s1));
 	str[ft_strlen(s1)] = '\0';
 	return (str);
 }
-
-// int main()
-// {
-//     char *str;
-//     str = ft_strdup("Hello World");
-//     printf("%s\n", str);
-// }
