@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:01 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:12:01 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:06:46 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	ft_wordsize(char *s, char c)
 	int	i;
 
 	i = 0;
-	while (s[i] != c)
+	while (s[i] && s[i] != c)
 	{
 		i++;
 	}
@@ -57,10 +57,10 @@ static char	*ft_word(char *s, char c)
 
 	i = 0;
 	wordlen = ft_wordsize(s, c);
-	word = (char *)malloc(wordlen + 1);
+	word = (char *)malloc(sizeof(char) * (wordlen + 1));
 	if (!word)
 		return (0);
-	while (s[i] != c && s[i])
+	while (i < wordlen)
 	{
 		word[i] = s[i];
 		i++;
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	s2 = (char *)s;
-	str = (char **)malloc(sizeof(char **) * ft_countword(s2, c) + 1);
+	str = (char **)malloc(sizeof(char *) * (ft_countword(s2, c) + 1));
 	if (!str)
 		return (0);
 	i = 0;
@@ -100,9 +100,9 @@ char	**ft_split(char const *s, char c)
 
 // int main()
 // {
-//     char s[] = "xxxxItsxxxxxxxxMexxxx";
+//     char s[] = "          ";
 //     char **str;
-//     str = ft_split(s, 'x');
+//     str = ft_split(s, ' ');
 //     int i = 0;
 //     while (str[i])
 //     {
