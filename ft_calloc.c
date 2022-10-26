@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 20:19:37 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 20:19:37 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:48:48 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,3 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (str);
 }
-
-// int main()
-// {
-//     char *str = ft_calloc(212, sizeof(char));
-//     str = memcpy(str, "Helloererserso3", 5);
-//     printf("%s\n", str);
-//     free(str);
-//     printf("%s",str);
-// }

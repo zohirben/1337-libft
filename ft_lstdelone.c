@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:11:38 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:11:38 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:48:28 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,31 +21,3 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	del(lst->content);
 	free(lst);
 }
-
-// void    ft_del(void *content)
-// {
-//     printf("%s\n", content);
-// }
-
-// int main()
-// {
-//     t_list *head;
-//     t_list *second;
-//     t_list *third;
-//     t_list *fourth;
-//     t_list *ptr;
-//     head = (t_list *)malloc(sizeof(t_list));
-//     second = (t_list *)malloc(sizeof(t_list));
-//     third = (t_list *)malloc(sizeof(t_list));
-//     fourth = (t_list *)malloc(sizeof(t_list));
-//     head->content = "one";
-//     head->next = second;
-//     second->content = "two";
-//     second->next = third;
-//     third->content = "three";
-//     third->next = fourth;
-//     fourth->content = "last";
-//     fourth->next = NULL;
-
-//     ft_lstdelone(head, ft_del);
-// }

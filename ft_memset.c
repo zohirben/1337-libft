@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:11:52 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/25 16:50:33 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:49:53 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < len)

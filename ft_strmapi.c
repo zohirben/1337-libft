@@ -6,21 +6,11 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:19 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:12:19 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:50:37 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// char ft_crypt(unsigned int key, char c)
-// {
-//     return (c+=key);
-// }
-
-// char ft_decrypt(unsigned int key, char c)
-// {
-//     return (c-=key);
-// }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -43,13 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-// int main()
-// {
-//     const char *s = "Hello World";
-//     char *str;
-//     str = ft_strmapi(s, ft_crypt);
-//     printf("%s\n", str);
-//     str = ft_strmapi(str, ft_decrypt);
-//     printf("%s\n", str);
-// }

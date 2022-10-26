@@ -6,16 +6,11 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:06 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:12:06 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:50:19 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// void    ft_achanger(unsigned int x, char *cptr)
-// {
-//     *cptr+=x;
-// }
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
@@ -31,10 +26,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		}
 	}
 }
-
-// int main()
-// {
-//     char str[] = "Hello World";
-//     ft_striteri(str, ft_achanger);
-//     printf("%s\n", str);
-// }

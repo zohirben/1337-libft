@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:23 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/25 20:12:00 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:50:42 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-// int main()
-// {
-//     char str[] = "";
-//     char sub[] = "coucou";
-//     printf("%s\n", ft_strnstr(str, sub, -1));
-//     printf("%s", strnstr(str, sub, -1));
-// }

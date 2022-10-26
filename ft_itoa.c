@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:11:30 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:11:30 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 04:29:33 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,8 @@ static int	ft_numblen(long numb)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+static char	*ft_all(char *str, long numb, int len, int i)
 {
-	long	numb;
-	int		i;
-	int		len;
-	char	*str;
-
-	i = 0;
-	numb = n;
-	len = ft_numblen(numb);
 	str = (char *)malloc(len + 1);
 	if (!str)
 		return (0);
@@ -68,8 +60,19 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-// int main()
-// {
-//     int numb = -1234;
-//     printf("%s\n", ft_itoa(numb));
-// }
+char	*ft_itoa(int n)
+{
+	long	numb;
+	int		i;
+	int		len;
+	char	*str;
+
+	str = 0;
+	i = 0;
+	numb = n;
+	len = ft_numblen(numb);
+	str = ft_all(str, numb, len, i);
+	if (!str)
+		return (0);
+	return (str);
+}

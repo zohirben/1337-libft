@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:49 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/25 22:54:15 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:50:56 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));
-	if ((start+len) > ft_strlen(s))
+	if ((start + len) > ft_strlen(s))
 		len = ft_strlen(s) - start;
 	str = (char *)malloc(len + 1);
 	if (!str)
@@ -35,10 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-
-// int main()
-// { badredinesouhar  
-//     char *str;
-//     str = ft_substr("No More Bite No Bark", 18, 4);
-//     printf("%s", str);
-// }

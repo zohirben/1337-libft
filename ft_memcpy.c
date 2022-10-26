@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:11:49 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:11:49 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:49:48 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
-	char *str1;
-	char *str2;
+	size_t	i;
+	char	*str1;
+	char	*str2;
 
 	i = 0;
 	if (dst == src)

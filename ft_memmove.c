@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:11:50 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/25 16:57:57 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:49:50 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t i;
-	char *str1;
-	char *str2;
+	size_t	i;
+	char	*str1;
+	char	*str2;
 
 	i = len - 1;
 	str1 = (char *)src;

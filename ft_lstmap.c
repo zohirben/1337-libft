@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:26:51 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/25 14:48:15 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:49:02 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *ptr;
-	t_list *head;
+	t_list	*ptr;
+	t_list	*head;
 
 	head = 0;
 	ptr = 0;

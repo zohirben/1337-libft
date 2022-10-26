@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:11:42 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:11:42 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:49:39 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,27 +20,3 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
-
-// int main()
-// {
-//     t_list *head;
-//     t_list *second;
-//     t_list *third;
-//     t_list *fourth;
-//     t_list *ptr;
-//     head = (t_list *)malloc(sizeof(t_list));
-//     second = (t_list *)malloc(sizeof(t_list));
-//     third = (t_list *)malloc(sizeof(t_list));
-//     fourth = (t_list *)malloc(sizeof(t_list));
-//     head->content = "one";
-//     head->next = second;
-//     second->content = "two";
-//     second->next = third;
-//     third->content = "three";
-//     third->next = fourth;
-//     fourth->content = "last";
-//     fourth->next = NULL;
-
-//     ptr = ft_lstlast(head);
-//     printf("%s", ptr->next);
-// }

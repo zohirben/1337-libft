@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:07 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:12:08 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:50:22 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[j] = '\0';
 	return (str);
 }
-
-// int main()
-// {
-//     char *s1 = "Hello This ";
-//     char *s2 = "Is Me";
-//     char *str;
-//     str = ft_strjoin(s1, s2);
-//     printf("%s", str);
-// }

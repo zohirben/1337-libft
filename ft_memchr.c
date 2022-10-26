@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:11:46 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:11:46 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:49:45 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-// {
-//     char str[] = "Hello This is meh";
-//     printf("%s\n", ft_memchr(str, 'T', 8));
-//     printf("%s", memchr(str, 'T', 8));
-// }

@@ -6,14 +6,15 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:11:55 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:11:55 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 04:22:01 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (s)

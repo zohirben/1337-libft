@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:47 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/26 02:27:34 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:50:52 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, start, (end - start) + 1);
 	return (str);
 }
-
-// int main()
-// {
-//     char *str;
-//     char *s1 = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !";
-//     char *set = " \n\t";
-//     // char *s2 = "Hello \t  Please\n Trim me !";
-//     str = ft_strtrim(s1, set);
-//     printf("%s\n", str);
-//     printf("%s\n", &s1[16]);
-// }

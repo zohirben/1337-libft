@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:02 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/25 18:33:53 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:50:12 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
-	char *str;
-	int len;
+	int		i;
+	char	*str;
+	int		len;
 
 	i = 0;
 	str = (char *)s;

@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:01 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/26 03:06:46 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:50:07 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,17 +97,3 @@ char	**ft_split(char const *s, char c)
 	str[i] = NULL;
 	return (str);
 }
-
-// int main()
-// {
-//     char s[] = "          ";
-//     char **str;
-//     str = ft_split(s, ' ');
-//     int i = 0;
-//     while (str[i])
-//     {
-//         printf("%s", str[i]);
-//         printf("\n");
-//         i++;
-//     }
-// }

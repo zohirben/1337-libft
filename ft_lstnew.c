@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:11:43 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/24 21:11:44 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:49:36 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ t_list	*ft_lstnew(void *content)
 	head->next = NULL;
 	return (head);
 }
-
-// int main()
-// {
-//     t_list *ptr;
-
-//     ptr = ft_lstnew('E');
-//     printf("%c", ptr->content);
-// }

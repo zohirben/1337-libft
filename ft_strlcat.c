@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:12:10 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/26 03:32:16 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/26 03:50:25 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t j;
-	size_t dstlen;
-	size_t destnow;
+	size_t	i;
+	size_t	j;
+	size_t	dstlen;
+	size_t	destnow;
 
 	i = 0;
 	j = 0;
