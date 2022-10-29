@@ -6,7 +6,7 @@
 /*   By: zbenaiss <zbenaiss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:11:36 by zbenaiss          #+#    #+#             */
-/*   Updated: 2022/10/26 03:48:30 by zbenaiss         ###   ########.fr       */
+/*   Updated: 2022/10/27 21:31:40 by zbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	ptr = *lst;
 	while (ptr)
 	{
-		ft_lstdelone(*lst, del);
 		ptr = ptr->next;
+		ft_lstdelone(*lst, del);
 		*lst = ptr;
 	}
 }
